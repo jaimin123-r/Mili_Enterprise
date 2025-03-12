@@ -245,9 +245,9 @@ const cards = [
     heading: "ROOFING SHADES",
     description: "A good roof means a good house. Roofing is a very crucial part of any living space project...",
     images: [
-      "Shades1.jpg",
-      "Shades2.jpg",
-      "Shades3.jpg",
+      "Shades5.jpeg",
+      "Shades6.jpeg",
+      "Shades7.jpeg",
       "Shades4.png"
     ]
   },
@@ -267,10 +267,10 @@ const cards = [
     heading: "IRON GRILLS",
     description: "Having window grills is an age-old practice that has been followed across the globe.",
     images: [
-      "gril1.jpg",
-      "gril2.jpg",
-      "gril3.jpg",
-      "gril4.jpg"
+      "irongrill5.jpeg",
+      "irongrill6.jpeg",
+      "irongrill7.jpeg",
+      "irongrill8.jpeg"
     ]
   },
 ];

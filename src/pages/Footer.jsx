@@ -47,10 +47,11 @@ const Footer = () => {
                   <span>Bavla, Ahmedabad, Gujarat 382220, India</span>
                 </p>
                 <p className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#6b7280" className="w-6 h-6 mr-2 text-gray-500" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" viewBox="0 0 13333.33 13333.33" id="whatsapp">
+  <path d="M6668.43 10621.66c-809.34,0 -1559.74,-243.52 -2191.57,-654.83l-1526.58 483.73 493.6 -1470.81c-477.12,-644.87 -760.15,-1454.33 -760.15,-2319.68 0,-128.34 9.84,-250.07 26.31,-378.39 194.16,-2003.85 1898.59,-3570.02 3958.39,-3570.02 2092.6,0 3813.46,1608.96 3974.57,3642.41 6.61,105.26 6.61,210.54 6.61,305.99 0,2181.5 -1786.43,3961.59 -3981.18,3961.59z"></path>
+  <path fill="#000" d="M8050.36 7196.37c-115.4,-29.61 -187.6,-55.93 -269.89,65.83 -118.55,187.54 -368.58,598.83 -611.98,477.1 -121.7,-55.93 -493.43,-177.7 -937.67,-572.54 -345.56,-309.3 -582.34,-681.09 -645.08,-792.96 -101.84,-190.85 220.39,-391.56 338.94,-631.75 39.41,-78.98 23.02,-144.78 -9.78,-200.72 -23.02,-55.93 -256.65,-628.44 -355.33,-855.48 -95.53,-233.63 -194.22,-194.12 -256.65,-194.12 -645.09,0 -947.76,457.36 -947.76,1098.94 0,128.32 26.48,266.55 65.89,388.28 115.08,411.3 371.73,743.61 411.46,799.55 55.81,78.94 799.58,1276.65 1980.66,1737.35 1187.7,460.58 1187.7,305.96 1398.31,289.47 207.46,-16.37 684.5,-273.11 783.19,-549.49 95.53,-266.48 95.53,-500.15 62.43,-549.46 -39.41,-69.08 -1006.72,-506.7 -1006.72,-510.01z"></path>
+</svg>
 
-                    </svg>
                 <a href="tel:+91 9537619792">+91 9537619792</a>
               </p>
               <p className="flex items-center">
@@ -63,13 +64,13 @@ const Footer = () => {
                 <svg className="w-5 h-5 mr-2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
-                <span>Mon - Sat: 9:00 AM - 6:00 PM</span>
+                <span>Mon - Sun: 9:00 AM - 6:00 PM</span>
               </p>
             </div>
           </div>
           
           {/* Google Map */}
-          <div>
+          {/* <div>
             <h3 className="text-xl font-semibold mb-4">Find Us</h3>
             <div className="h-64 w-full overflow-hidden rounded-md">
               <iframe 
@@ -82,7 +83,7 @@ const Footer = () => {
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       
