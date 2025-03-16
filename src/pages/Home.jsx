@@ -71,10 +71,10 @@ const Home = () => {
               <div className="text-4xl font-bold mb-2">500+</div>
               <p className="text-blue-100">Projects Completed</p>
             </div>
-            <div>
+{/*             <div>
               <div className="text-4xl font-bold mb-2">100+</div>
               <p className="text-blue-100">Happy Clients</p>
-            </div>
+            </div> */}
             <div>
               <div className="text-4xl font-bold mb-2">50+</div>
               <p className="text-blue-100">Team Members</p>
@@ -82,10 +82,21 @@ const Home = () => {
           </div>
         </div>
       </div>
-      
+        <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <div className="max-w-xs mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-sm hover:scale-105 transition-transform duration-300">
+        <div className="p-6">
+          <h2 className="text-2xl font-bold mb-2 text-center text-gray-800">Dhruv Dave</h2>
+          <p className="text-gray-600 mb-2 text-center"><strong>Phone:</strong> +91 9537619792</p>
+          <p className="text-gray-600 mb-4 text-center"><strong>Email:</strong> iamdhruvdave@gmail.com</p>
+          <p className="text-gray-700 text-sm text-center">
+            Owner of MILI ENTERPRISE, a leading fabrication company specializing in high-quality, custom fabrication solutions. With a commitment to precision engineering and superior craftsmanship, MILI ENTERPRISE delivers exceptional results for a wide range of industrial needs.
+          </p>
+        </div>
+      </div>
+    </div>
       {/* Client Reviews */}
-      <ReviewSlider />
-      
+{/*       <ReviewSlider />
+       */}
       {/* Blog Preview */}
       {/* <BlogPreview /> */}
   
