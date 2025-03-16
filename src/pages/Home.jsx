@@ -82,7 +82,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-        <div className="flex items-center justify-center min-h-screen bg-gray-100">
+        <div className="flex items-center justify-center bg-gray-100">
       <div className="max-w-xs mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-sm hover:scale-105 transition-transform duration-300">
         <div className="p-6">
           <h2 className="text-2xl font-bold mb-2 text-center text-gray-800">Dhruv Dave</h2>
