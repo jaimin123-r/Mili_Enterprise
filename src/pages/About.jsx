@@ -2,7 +2,7 @@ const About = () => {
     return (
       <div>
         {/* About Hero Section */}
-        <div className="bg-gradient-to-r from-zinc-950 to-zinc-800 text-white py-16 md:py-24">
+        <div className="bg-gradient-to-b from-[#20174a] via-[#2c2067] to-[#6233cc] text-white py-16 md:py-24">
           <div className="container-custom">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">About Fabrication World</h1>
             <p className="text-lg text-blue-100 max-w-3xl">

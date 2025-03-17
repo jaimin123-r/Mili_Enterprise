@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div
       name="Home"
-      className="max-w-screen-2xl container mx-auto px-4 md:px-6 bg-zinc-900 text-white"
+      className="bg-gradient-to-b from-[#150f30] via-[#2c2067] to-[#6233cc] max-w-screen-2xl container mx-auto px-4 md:px-6 text-white"
     >
       <div className="flex flex-col md:flex-row">
         {/* Left Text */}
@@ -40,7 +40,7 @@ const Hero = () => {
         {/* Right Image */}
         <div className="md:w-1/2 order-1">
           <img
-            src="newlogo.png"
+            src="mili3.png"
             className="md:h-[450px] md:ml-10 mt-8 rounded-full hover:scale-105 duration-200"
             alt=""
           />

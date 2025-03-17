@@ -1,6 +1,9 @@
+import React from 'react';
+import { Mail, Phone } from 'lucide-react';
+
 const Footer = () => {
     return (
-      <footer className="bg-gradient-to-r from-zinc-950 to-zinc-800 text-white">
+      <footer className="bg-gradient-to-r from-indigo-900 to-purple-900 text-white">
         <div className="container-custom py-12">
           <div className="grid md:grid-cols-3 gap-8">
             {/* Company Info */}
@@ -52,7 +55,7 @@ const Footer = () => {
   <path fill="#000" d="M8050.36 7196.37c-115.4,-29.61 -187.6,-55.93 -269.89,65.83 -118.55,187.54 -368.58,598.83 -611.98,477.1 -121.7,-55.93 -493.43,-177.7 -937.67,-572.54 -345.56,-309.3 -582.34,-681.09 -645.08,-792.96 -101.84,-190.85 220.39,-391.56 338.94,-631.75 39.41,-78.98 23.02,-144.78 -9.78,-200.72 -23.02,-55.93 -256.65,-628.44 -355.33,-855.48 -95.53,-233.63 -194.22,-194.12 -256.65,-194.12 -645.09,0 -947.76,457.36 -947.76,1098.94 0,128.32 26.48,266.55 65.89,388.28 115.08,411.3 371.73,743.61 411.46,799.55 55.81,78.94 799.58,1276.65 1980.66,1737.35 1187.7,460.58 1187.7,305.96 1398.31,289.47 207.46,-16.37 684.5,-273.11 783.19,-549.49 95.53,-266.48 95.53,-500.15 62.43,-549.46 -39.41,-69.08 -1006.72,-506.7 -1006.72,-510.01z"></path>
 </svg>
 
-                <a href="tel:+91 9537619792">+91 9537619792</a>
+                <a href="tel:+91 9537619792">+91 9537994341</a>
               </p>
               <p className="flex items-center">
                 <svg className="w-5 h-5 mr-2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -68,27 +71,37 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          
-          {/* Google Map */}
-          {/* <div>
-            <h3 className="text-xl font-semibold mb-4">Find Us</h3>
-            <div className="h-64 w-full overflow-hidden rounded-md">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235013.70717755274!2d72.43965454062733!3d23.02045769548337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1708704582306!5m2!1sen!2sin" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen="" 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+   
+            <div className="w-full max-w-2xl bg-white shadow-xl rounded-2xl overflow-hidden p-6 md:flex md:items-center">
+                <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-6">
+                    <div className="h-28 w-28 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full flex items-center justify-center text-white text-3xl font-bold shadow-lg">
+                        DD
+                    </div>
+                </div>
+                <div className="flex-grow">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-2">Dhruv Dave</h2>
+                    <p className="text-sm text-gray-600 mb-2">Owner of <span className="font-semibold text-purple-600">MILI ENTERPRISE</span></p>
+                    {/* <p className="text-gray-700 text-sm mb-4">
+                        A leading fabrication company specializing in high-quality, custom fabrication solutions. With a commitment to precision engineering and superior craftsmanship, MILI ENTERPRISE delivers exceptional results for a wide range of industrial needs.
+                    </p> */}
+                    <div className="text-sm text-gray-800 space-y-2">
+                        <div className="flex items-center gap-2">
+                            <Phone className="text-purple-600" />
+                            <span>+91 9537994341</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <Mail className="text-purple-600" />
+                            <span>iamdhruvdave@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div> */}
         </div>
       </div>
+     
       
       {/* Copyright */}
-      <div className="bg-gray-950 py-4">
+      <div className="bg-gradient-to-r from-indigo-900 to-purple-900 py-4">
         <div className="container-custom text-center text-gray-400 text-sm">
           <p>© {new Date().getFullYear()} Fabrication World. All rights reserved.</p>
         </div>

@@ -37,8 +37,8 @@ const Navbar = () => {
       transition={{ type: 'spring', stiffness: 120, damping: 20 }}
       className={`font-['Montserrat'] fixed w-full top-0 z-50 transition-all duration-300 ${
         scrollPosition > 50 
-          ? 'bg-black/90 backdrop-blur-md shadow-lg py-2' 
-          : 'bg-black shadow-md py-4'
+          ? ' bg-gradient-to-r from-indigo-900 to-purple-900 py-2' 
+          : 'bg-[#150f30] shadow-md py-4'
       }`}
     >
       <div className="container-custom px-4 mx-auto">
@@ -50,12 +50,12 @@ const Navbar = () => {
           >
             <Link to="/" className="flex items-center">
               <motion.img 
-                src="newlogo.png" 
+                src="mili3.png" 
                 alt="Logo" 
-                className="h-16"
+                className="h-28"
                 whileHover={{ 
                   scale: 1.05,
-                  rotate: [0, -5, 5, -5, 0],
+                  // rotate: [0, -5, 5, -5, 0],
                   transition: { duration: 0.5 }
                 }}
               />
@@ -155,8 +155,8 @@ const Navbar = () => {
                   transition={{ delay: 0.3 }}
                   className="pt-2 mt-2 border-t border-white/10"
                 >
-                  <a href='tel:9537619792' className="w-full bg-yellow-600 text-white py-3 rounded-lg font-bold text-lg shadow-lg hover:bg-yellow-700 transition-colors p-4">
-                    Call 9537619792
+                  <a href='tel:9537994341' className="w-full bg-zinc-200 text-black py-3 rounded-lg font-bold text-lg shadow-lg hover:bg-zinc-400 transition-colors p-4">
+                    Call 9537994341
                   </a>
                 </motion.div>
               </div>

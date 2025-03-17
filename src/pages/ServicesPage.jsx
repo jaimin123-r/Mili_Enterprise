@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Circle, Box, Pipette, CheckSquare, BarChart2, AlignCenter, Type, Layers } from 'lucide-react';
 import { X } from 'lucide-react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Trading_Items = ({ showAll = false, limit = 3 }) => {
   const services = [
@@ -161,50 +163,84 @@ const Trading_Items = ({ showAll = false, limit = 3 }) => {
 
 
 const ServicesPage = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: false,
+      mirror: true
+    });
+  }, []);
+ 
 
   return (
-    <div>
+    <div className="overflow-hidden">
+      
       {/* Services Hero Section */}
-      <div className="bg-gradient-to-r from-zinc-950 to-zinc-800 text-white py-16 md:py-24">
-        <div className="container-custom">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">All types of Febrication Work we provide</h1>
-          <p className="text-lg text-blue-100 max-w-3xl">
+      <div className="bg-gradient-to-b from-[#20174a] via-[#2c2067] to-[#6233cc] text-white py-20 md:py-28">
+        <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
+          <h1 
+            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
+            data-aos="fade-right"
+          >
+            All Types of <span className="text-yellow-500">Fabrication Work</span> We Provide
+          </h1>
+          <p 
+            className="text-lg md:text-xl text-indigo-100 max-w-3xl"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             We offer a comprehensive range of fabrication services to meet diverse industry needs. Our advanced equipment and skilled team ensure high-quality results for every project.
           </p>
         </div>
       </div>
 
       {/* Detailed Services */}
-      <div className="bg-white py-12">
-        <div className="container-custom">
-          <h2 className="title-section">Our Febrication Work</h2>
-           <div className="min-h-screen bg-gray-100">
-    <main>
-      <PhotoGrid />
-    </main>
-  </div>
+      <div className="bg-gradient-to-b from-gray-50 to-white py-16">
+        <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
+          <h2 
+            className="text-3xl md:text-4xl font-bold mb-12 title-section"
+            data-aos="fade-up"
+          >
+            Our Fabrication Work
+          </h2>
+          <PhotoGrid />
         </div>
       </div>
 
-        {/* Trading Items Overview */}
-        <Trading_Items showAll={true} />
+      {/* Trading Items Overview */}
+      <Trading_Items showAll={true} />
       
       {/* Call to Action */}
-      <div className="bg-gradient-to-r from-zinc-950 to-zinc-800 text-white section-padding">
-        <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Need a Custom Solution?</h2>
-          <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
+      <div className="bg-gradient-to-r from-indigo-900 to-purple-900 text-white py-20">
+        <div className="container mx-auto px-6 lg:px-8 max-w-7xl text-center">
+          <h2 
+            className="text-3xl md:text-4xl font-bold mb-6"
+            data-aos="fade-up"
+          >
+            Need a Custom Solution?
+          </h2>
+          <p 
+            className="text-indigo-100 text-lg mb-8 max-w-2xl mx-auto"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             Contact us today to discuss your specific requirements. Our team will work with you to develop the perfect fabrication solution for your project.
           </p>
-          <a href="/contact" className="bg-white text-black hover:bg-gray-100 font-semibold py-3 px-8 rounded-md transition duration-300">
+          <motion.a 
+            href="/contact" 
+            className="inline-block bg-white text-black font-semibold py-3 px-8 rounded-md transition duration-300 shadow-lg"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
             Request a Quote
-          </a>
+          </motion.a>
         </div>
       </div>
     </div>
   );
 };
-
 
 const cards = [
   {
@@ -220,7 +256,7 @@ const cards = [
   },
   {
     id: 2,
-    heading: "STIARCASE RAILING",
+    heading: "STAIRCASE RAILING",
     description: "Installing balconies is extremely crucial to ensure the all-around safety of your property.",
     images: [
       "Railing1.jpg",
@@ -232,7 +268,7 @@ const cards = [
   {
     id: 3,
     heading: "BOUNDARY WALLS",
-    description: "Boundary walls may sound unappealing and something that dulls your space’s overall look, but that’s not the case with us. ",
+    description: "Boundary walls may sound unappealing and something that dulls your space's overall look, but that's not the case with us. ",
     images: [
       "boundary_1.jpg",
       "boundary_2.jpg",
@@ -281,10 +317,11 @@ const ImageCard = ({ card }) => {
   return (
     <>
       <motion.div 
-        className="bg-white rounded-lg shadow-md overflow-hidden"
-        whileHover={{ scale: 1.02 }}
+        className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300"
+        whileHover={{ y: -5 }}
         transition={{ duration: 0.3 }}
       >
+      
         <div className="grid grid-cols-2 gap-2 p-3">
           {card.images.map((image, index) => (
             <div 
@@ -292,27 +329,55 @@ const ImageCard = ({ card }) => {
               className="relative aspect-square overflow-hidden rounded-md cursor-pointer"
               onClick={() => setSelectedImage(image)}
             >
-              <motion.img 
-                src={image} 
-                alt={`${card.heading} image ${index + 1}`}
-                className="w-full h-full object-cover"
-                whileHover={{ scale: 1.1 }}
+              <motion.div 
+                className="w-full h-full overflow-hidden"
+                whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
-              />
+              >
+                <img 
+                  src={image} 
+                  alt={`${card.heading} image ${index + 1}`}
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                />
+              </motion.div>
             </div>
           ))}
         </div>
-        <div className="p-4">
-          <h3 className="text-xl font-bold mb-2">{card.heading}</h3>
+        <div className="p-5">
+          <h3 className="text-xl font-bold mb-2 text-indigo-800">{card.heading}</h3>
           <p className="text-gray-600">{card.description}</p>
+          <motion.button
+            className="mt-4 text-emerald-600 font-medium flex items-center gap-1 group"
+            whileHover={{ x: 5 }}
+          >
+            View Details
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              width="16" 
+              height="16" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="2" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+              className="transition-transform duration-300 group-hover:translate-x-2"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </motion.button>
         </div>
       </motion.div>
 
       {/* Image Preview Modal */}
       {selectedImage && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4"
+        <motion.div 
+          className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-4"
           onClick={() => setSelectedImage(null)}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -322,7 +387,7 @@ const ImageCard = ({ card }) => {
             onClick={(e) => e.stopPropagation()}
           >
             <button 
-              className="absolute top-2 right-2 bg-white rounded-full p-1 shadow-lg"
+              className="absolute top-3 right-3 bg-white text-gray-800 rounded-full p-2 shadow-lg hover:bg-gray-200 transition-colors"
               onClick={() => setSelectedImage(null)}
             >
               <X size={24} />
@@ -333,7 +398,7 @@ const ImageCard = ({ card }) => {
               className="max-w-full max-h-screen object-contain rounded-lg"
             />
           </motion.div>
-        </div>
+        </motion.div>
       )}
     </>
   );
@@ -341,14 +406,16 @@ const ImageCard = ({ card }) => {
 
 const PhotoGrid = () => {
   return (
-    <div className="container mx-auto py-8 px-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="container mx-auto py-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {cards.map((card) => (
           <motion.div
             key={card.id}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: card.id * 0.1 }}
+            data-aos="fade-up"
+            data-aos-delay={card.id * 100}
           >
             <ImageCard card={card} />
           </motion.div>
@@ -357,6 +424,5 @@ const PhotoGrid = () => {
     </div>
   );
 };
-
 
 export default ServicesPage;

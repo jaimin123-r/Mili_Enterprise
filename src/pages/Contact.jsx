@@ -29,9 +29,24 @@ const ContactForm = () => {
     setFormStatus({ submitted: true, success: false, message: 'Sending your message...' });
     
     try {
-      // Simulate API delay
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      // Get form data
+      const { name, email, phone, subject, message } = formData;
       
+      // Format the message for WhatsApp
+      const whatsappMessage = `*New Contact Form Submission*%0A
+  *Name:* ${name}%0A
+  *Email:* ${email}%0A
+  *Phone:* ${phone}%0A
+  *Subject:* ${subject}%0A
+  *Message:* ${message}`;
+      
+      // Create WhatsApp URL with your number and formatted message
+      const whatsappURL = `https://api.whatsapp.com/send?phone=9537994341&text=${whatsappMessage}`;
+      
+      // Open WhatsApp in a new window
+      window.open(whatsappURL, '_blank');
+      
+      // Update form status
       setFormStatus({
         submitted: true,
         success: true,
@@ -48,7 +63,7 @@ const ContactForm = () => {
       });
       
     } catch (error) {
-      console.error('Error sending email:', error);
+      console.error('Error sending message:', error);
       setFormStatus({
         submitted: true,
         success: false,
@@ -79,11 +94,11 @@ const ContactForm = () => {
 
   const getInputIcon = (fieldName) => {
     switch(fieldName) {
-      case 'name': return <User size={18} />;
-      case 'email': return <Mail size={18} />;
-      case 'phone': return <Phone size={18} />;
-      case 'subject': return <FileText size={18} />;
-      case 'message': return <MessageSquare size={18} />;
+      case 'name': return <User size={18} className='text-white'/>;
+      case 'email': return <Mail size={18} className='text-white'/>;
+      case 'phone': return <Phone size={18} className='text-white'/>;
+      case 'subject': return <FileText size={18} className='text-white'/>;
+      case 'message': return <MessageSquare size={18} className='text-white'/>;
       default: return null;
     }
   };
@@ -94,7 +109,7 @@ const ContactForm = () => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="bg-gradient-to-r from-zinc-950 to-zinc-800 text-white py-16"
+        className="bg-gradient-to-b from-[#150f30] via-[#2c2067] to-[#6233cc] text-white py-16 mt-8"
       >
         <div className="container-custom px-4 mx-auto">
           <motion.h1 
@@ -114,10 +129,10 @@ const ContactForm = () => {
             We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.
           </motion.p>
         </div>
-      </motion.div>
+      </motion.div> <br />
 
       <div className="container-custom px-4 mx-auto py-16">
-        <div className="bg-white rounded-xl shadow-xl p-8 md:p-10 -mt-16 relative z-10 max-w-4xl mx-auto">
+        <div className="bg-gradient-to-b from-[#20174a] via-[#2c2067] to-[#6233cc] rounded-xl shadow-xl p-8 md:p-10 -mt-16 relative z-10 max-w-4xl mx-auto">
           {formStatus.submitted && (
             <motion.div 
               initial={{ opacity: 0, y: -10 }}
@@ -164,7 +179,7 @@ const ContactForm = () => {
                     onFocus={() => setFocusedField('name')}
                     onBlur={() => setFocusedField(null)}
                     required
-                    className="w-full py-2 bg-transparent focus:outline-none text-gray-800"
+                    className="w-full py-2 bg-transparent focus:outline-none text-white"
                   />
                 </div>
               </motion.div>
@@ -184,7 +199,7 @@ const ContactForm = () => {
                     onFocus={() => setFocusedField('email')}
                     onBlur={() => setFocusedField(null)}
                     required
-                    className="w-full py-2 bg-transparent focus:outline-none text-gray-800"
+                    className="w-full py-2 bg-transparent focus:outline-none text-white"
                   />
                 </div>
               </motion.div>
@@ -204,7 +219,7 @@ const ContactForm = () => {
                     onFocus={() => setFocusedField('phone')}
                     onBlur={() => setFocusedField(null)}
                     required
-                    className="w-full py-2 bg-transparent focus:outline-none text-gray-800"
+                    className="w-full py-2 bg-transparent focus:outline-none text-white"
                   />
                 </div>
               </motion.div>
@@ -224,7 +239,7 @@ const ContactForm = () => {
                     onFocus={() => setFocusedField('subject')}
                     onBlur={() => setFocusedField(null)}
                     required
-                    className="w-full py-2 bg-transparent focus:outline-none text-gray-800"
+                    className="w-full py-2 bg-transparent focus:outline-none text-white"
                   />
                 </div>
               </motion.div>
@@ -247,7 +262,7 @@ const ContactForm = () => {
                   onBlur={() => setFocusedField(null)}
                   required
                   rows="4"
-                  className="w-full py-2 bg-transparent focus:outline-none resize-none text-gray-800"
+                  className="w-full py-2 bg-transparent focus:outline-none resize-none text-white"
                 ></textarea>
               </div>
             </motion.div>
@@ -260,7 +275,7 @@ const ContactForm = () => {
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 type="submit"
-                className="bg-gradient-to-r from-zinc-900 to-zinc-700 text-white font-medium py-3 px-8 rounded-full inline-flex items-center gap-2 shadow-lg hover:shadow-xl transition-all"
+                className="bg-zinc-200 text-black font-medium py-3 px-8 rounded-full inline-flex items-center gap-2 shadow-lg hover:shadow-xl transition-all"
               >
                 <span>Send Message</span>
                 <Send size={18} />
