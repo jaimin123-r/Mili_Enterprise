@@ -85,43 +85,17 @@ const Home = () => {
               <div className="text-5xl font-bold mb-3 bg-clip-text text-transparent bg-white">500+</div>
               <p className="text-indigo-100 text-lg">Projects Completed</p>
             </div>
-            <div className="transform transition-transform duration-500 hover:scale-105" data-aos="zoom-in" data-aos-delay="400">
-              <div className="text-5xl font-bold mb-3 bg-clip-text text-transparent bg-white">50+</div>
-              <p className="text-indigo-100 text-lg">Team Members</p>
+         
+            <div>
+              <div className="text-4xl font-bold mb-2">50+</div>
+              <p className="text-blue-100">Team Members</p>
             </div>
           </div>
         </div>
       </div>
-      <br />
-      <span className="text-3xl md:text-4xl font-bold title-section m-12 " data-aos="fade-up">
-            Our Owner's Details
-          </span>
-      <div className="flex justify-center items-center p-6">
-            <div className="w-full max-w-2xl bg-white shadow-xl rounded-2xl overflow-hidden p-6 md:flex md:items-center">
-                <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-6">
-                    <div className="h-28 w-28 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full flex items-center justify-center text-white text-3xl font-bold shadow-lg">
-                        DD
-                    </div>
-                </div>
-                <div className="flex-grow">
-                    <h2 className="text-2xl font-bold text-gray-900 mb-2">Dhruv Dave</h2>
-                    <p className="text-sm text-gray-600 mb-2">Owner of <span className="font-semibold text-purple-600">MILI ENTERPRISE</span></p>
-                    <p className="text-gray-700 text-sm mb-4">
-                        A leading fabrication company specializing in high-quality, custom fabrication solutions. With a commitment to precision engineering and superior craftsmanship, MILI ENTERPRISE delivers exceptional results for a wide range of industrial needs.
-                    </p>
-                    <div className="text-sm text-gray-800 space-y-2">
-                        <div className="flex items-center gap-2">
-                            <Phone className="text-purple-600" />
-                            <span>+91 9537994341</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <Mail className="text-purple-600" />
-                            <span>iamdhruvdave@gmail.com</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      
+    
+  
     </div>
   );
 };
