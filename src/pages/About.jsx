@@ -4,7 +4,7 @@ const About = () => {
         {/* About Hero Section */}
         <div className="bg-gradient-to-b from-[#20174a] via-[#2c2067] to-[#6233cc] text-white py-16 md:py-24">
           <div className="container-custom">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">About Fabrication World</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">About Mili Enterprise</h1>
             <p className="text-lg text-blue-100 max-w-3xl">
               Since 2010, we've been providing high-quality fabrication solutions to businesses across India. Our commitment to excellence and precision has made us a trusted partner for all fabrication needs.
             </p>
@@ -18,7 +18,7 @@ const About = () => {
               <div>
                 <h2 className="title-section">Our Story</h2>
                 <p className="text-gray-700 mb-4">
-                  Fabrication World was founded in 2010 by Jaimin Rathod with a vision to provide superior quality fabrication services that meet international standards while catering to the local market needs.
+                  Fabrication World was founded in 2010 by Dhruv Dave with a vision to provide superior quality fabrication services that meet international standards while catering to the local market needs.
                 </p>
                 <p className="text-gray-700 mb-4">
                   What started as a small workshop has now grown into a full-fledged fabrication company with state-of-the-art machinery and a team of skilled professionals. Our journey has been marked by continuous learning, innovation, and a relentless pursuit of excellence.
